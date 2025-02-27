@@ -1,6 +1,6 @@
 -- line numbers and relative line number
 vim.opt.nu = true
-vim.opt.rnu = true
+--vim.opt.rnu = true
 
 -- use tabs not spaces and the width is 4 spaces
 vim.opt.tabstop = 4

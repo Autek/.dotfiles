@@ -58,5 +58,28 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+export WAYLAND_DISPLAY=$WAYLAND_DISPLAY
+export DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS
+
+export EDITOR=nvim
+
+alias hack="docker run -it --rm --device /dev/net/tun --cap-add=NET_ADMIN -v /home/marius/baleine/hack:/root hack-container"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/marius/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/marius/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/marius/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/marius/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

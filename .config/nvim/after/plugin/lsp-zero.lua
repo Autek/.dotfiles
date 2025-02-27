@@ -23,7 +23,8 @@ require('mason-lspconfig').setup({
 	'kotlin_language_server',  -- Kotlin
     'pyright',                 -- Python
     'jdtls',                   -- Java
-    'gopls',                   -- Go
+    'gopls',
+	'glslls',
   },
   handlers = {
     lsp_zero.default_setup,
